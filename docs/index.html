@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><title>Rapport de stock</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:system-ui,Segoe UI,Arial,sans-serif;background:#f3f4f6;color:#111827;margin:0;padding:24px}
+main{max-width:1000px;margin:auto} h1{margin-bottom:4px} .sub{color:#6b7280;margin-bottom:20px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:20px}
+.card{background:#fff;border-radius:10px;padding:16px;box-shadow:0 1px 3px #0002}
+.card span{display:block;color:#6b7280;font-size:13px} .card strong{font-size:24px} .card.warn strong{color:#dc2626}
+section{background:#fff;border-radius:10px;padding:16px 20px;margin-bottom:20px;box-shadow:0 1px 3px #0002;overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px} th,td{padding:8px;border-bottom:1px solid #e5e7eb;text-align:left}
+.num{text-align:right;white-space:nowrap} .pos{color:#15803d} .neg{color:#b91c1c}
+.level{min-width:140px} .bar{position:relative;height:12px;background:#e5e7eb;border-radius:6px}
+.fill{height:12px;border-radius:6px} .mark{position:absolute;top:-3px;width:2px;height:18px;background:#111827}
+.tag{padding:2px 8px;border-radius:10px;font-size:12px;background:#e5e7eb}
+.tag.draft{background:#fef3c7} .tag.sent{background:#dbeafe} .tag.received{background:#dcfce7} .tag.cancelled{background:#fee2e2}
+.legend{color:#6b7280;font-size:12px;margin-top:6px}
+</style></head><body><main>
+<h1>Rapport de stock</h1>
+<div class="sub">Généré le 11/11/2026 à 01:37</div>
+<div class="cards"><div class="card"><span>Produits suivis</span><strong>6</strong></div><div class="card"><span>Valeur du stock</span><strong>19 172.00 €</strong></div><div class="card warn"><span>Produits à réapprovisionner</span><strong>3</strong></div><div class="card"><span>Commandes en cours</span><strong>2</strong></div></div>
+<section><h2>État du stock</h2>
+<table><tr><th>Réf.</th><th>Produit</th><th class="num">Prix</th><th class="num">Qté</th><th class="num">Seuil</th><th>Niveau</th><th>Fournisseur</th></tr><tr><td>CAB-006</td><td>Câble USB-C</td><td class='num'>9.90 €</td><td class='num'>120</td><td class='num'>30</td><td class='level'><div class="bar"><div class="fill" style="width:100%;background:#16a34a"></div><div class="mark" style="left:25%"></div></div></td><td>—</td></tr><tr><td>HDP-005</td><td>Casque audio</td><td class='num'>129.00 €</td><td class='num'>2</td><td class='num'>6</td><td class='level'><div class="bar"><div class="fill" style="width:17%;background:#dc2626"></div><div class="mark" style="left:50%"></div></div></td><td>AudioPro</td></tr><tr><td>KEY-003</td><td>Clavier mécanique</td><td class='num'>89.00 €</td><td class='num'>25</td><td class='num'>8</td><td class='level'><div class="bar"><div class="fill" style="width:100%;background:#16a34a"></div><div class="mark" style="left:32%"></div></div></td><td>TechDistrib</td></tr><tr><td>LAP-001</td><td>Laptop Pro 14</td><td class='num'>1 199.00 €</td><td class='num'>12</td><td class='num'>5</td><td class='level'><div class="bar"><div class="fill" style="width:100%;background:#16a34a"></div><div class="mark" style="left:42%"></div></div></td><td>TechDistrib</td></tr><tr><td>MOU-002</td><td>Souris sans fil</td><td class='num'>39.00 €</td><td class='num'>3</td><td class='num'>10</td><td class='level'><div class="bar"><div class="fill" style="width:15%;background:#dc2626"></div><div class="mark" style="left:50%"></div></div></td><td>TechDistrib</td></tr><tr><td>SCR-004</td><td>Écran 27 pouces</td><td class='num'>249.00 €</td><td class='num'>4</td><td class='num'>5</td><td class='level'><div class="bar"><div class="fill" style="width:40%;background:#dc2626"></div><div class="mark" style="left:50%"></div></div></td><td>TechDistrib</td></tr></table>
+<div class="legend">Barre rouge : stock sous le seuil d'alerte. Le trait noir marque le seuil.</div></section>
+<section><h2>Réapprovisionnements suggérés</h2>
+<table><tr><th>Réf.</th><th>Produit</th><th class="num">Stock</th><th class="num">À commander</th><th>Fournisseur</th></tr><tr><td>HDP-005</td><td>Casque audio</td><td class='num'>2</td><td class='num'><strong>10</strong></td><td>AudioPro</td></tr><tr><td>MOU-002</td><td>Souris sans fil</td><td class='num'>3</td><td class='num'><strong>17</strong></td><td>TechDistrib</td></tr><tr><td>SCR-004</td><td>Écran 27 pouces</td><td class='num'>4</td><td class='num'><strong>6</strong></td><td>TechDistrib</td></tr></table>
+<div class="legend">Quantité suggérée = 2 × seuil d'alerte − stock actuel.</div></section>
+<section><h2>Commandes fournisseurs</h2>
+<table><tr><th>N°</th><th>Fournisseur</th><th>Statut</th><th class="num">Montant</th><th>Créée le</th></tr><tr><td>#1</td><td>AudioPro</td><td><span class='tag sent'>Envoyée</span></td><td class='num'>1 290.00 €</td><td>2026-11-11 01:37:13</td></tr><tr><td>#2</td><td>TechDistrib</td><td><span class='tag draft'>Brouillon</span></td><td class='num'>2 157.00 €</td><td>2026-11-11 01:37:13</td></tr></table></section>
+<section><h2>Derniers mouvements de stock</h2>
+<table><tr><th>Date</th><th>Réf.</th><th class="num">Variation</th><th>Motif</th></tr><tr><td>2026-11-11 01:37:13</td><td>CAB-006</td><td class='num pos'>+120</td><td>Stock initial</td></tr><tr><td>2026-11-11 01:37:13</td><td>HDP-005</td><td class='num pos'>+2</td><td>Stock initial</td></tr><tr><td>2026-11-11 01:37:13</td><td>SCR-004</td><td class='num pos'>+4</td><td>Stock initial</td></tr><tr><td>2026-11-11 01:37:13</td><td>KEY-003</td><td class='num pos'>+25</td><td>Stock initial</td></tr><tr><td>2026-11-11 01:37:13</td><td>MOU-002</td><td class='num pos'>+3</td><td>Stock initial</td></tr><tr><td>2026-11-11 01:37:13</td><td>LAP-001</td><td class='num pos'>+12</td><td>Stock initial</td></tr></table></section>
+</main></body></html>
